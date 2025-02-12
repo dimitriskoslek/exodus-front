@@ -1,0 +1,67 @@
+body { margin: 0; padding: 0; height: 100vh; }
+.container {
+    display: grid;
+    grid-template:
+        "map   log    log" 60%
+        "ascii log    log" 30%
+        "status status comms" 10%
+        / 30% 50% 20%;
+    height: 100vh;
+    gap: 5px;
+    padding: 5px;
+}
+
+.map-box {
+    grid-area: map;
+    border: 1px solid #444;
+    overflow: auto;
+    font-family: monospace;
+}
+
+.main-log {
+    grid-area: log;
+    border: 1px solid #444;
+    overflow-y: auto;
+    padding: 10px;
+    font-family: monospace;
+}
+
+.ascii-art {
+    grid-area: ascii;
+    border: 1px solid #444;
+    padding: 5px;
+    white-space: pre;
+}
+
+.comms-box {
+    grid-area: comms;
+    display: flex;
+    flex-direction: column;
+}
+
+.status-bars {
+    grid-area: status;
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+
+.status-bar {
+    width: 200px;
+    height: 20px;
+    background: #333;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.health-fill {
+    height: 100%;
+    background: #c00;
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+#command-input {
+    margin-top: auto;
+    padding: 5px;
+}

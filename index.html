@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Game Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="map-box" id="map">Map Loading...</div>
+    <div class="main-log" id="log"></div>
+    <pre class="ascii-art" id="ascii"></pre>
+    <div class="comms-box">
+        <div id="comms-log"></div>
+        <input type="text" id="command-input" placeholder="Enter command...">
+        <button onclick="sendCommand()">Send</button>
+    </div>
+    <div class="status-bars" id="status">
+        <div class="status-item">
+            <label>Health:</label>
+            <div class="status-bar"><div class="health-fill"></div></div>
+        </div>
+    </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
