@@ -11,10 +11,11 @@ async function sendCommand() {
     }
 
     try {
-        const response = await fetch('https://exodus-backend-bgvq.onrender.com', {
+        const response = await fetch('https://exodus-backend-bgvq.onrender.com/command', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ command })
+            body: JSON.stringify({ command }),
+            credentials: 'omit'
         });
 
         const data = await response.json();
