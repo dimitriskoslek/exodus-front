@@ -1,12 +1,14 @@
 // DOM Elements
-const commandInput = document.getElementById('command-input');
+const commandInput = document.querySelector('#command-input textarea');
 const logElement = document.getElementById('log');
 const asciiElement = document.getElementById('ascii');
 const mapElement = document.getElementById('map');
 
 async function sendCommand() {
     const command = commandInput.value.trim();
-    if (!command) return;
+    if (!command) {
+        return;
+    }
 
     try {
         const response = await fetch('https://exodus-backend-bgvq.onrender.com', {
@@ -46,7 +48,10 @@ function addToLog(text) {
 }
 
 commandInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') sendCommand();
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        sendCommand();
+    }
 });
 
 
