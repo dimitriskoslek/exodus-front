@@ -12,21 +12,34 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="map-box" id="map">Map Loading...</div>
-        <div class="main-log" id="log"></div>
-        <pre class="ascii-art" id="ascii"></pre>
-        <div class="comms-box">
-            <div id="comms-log"></div>
-            <input type="text" id="command-input" placeholder="Enter command...">
-            <button onclick="sendCommand()">Send</button>
+    <div id="client" tabindex="-1">
+        <!-- Log and Input -->
+        <div id="main-content">
+            <!-- Log -->
+            <div id="log"></div>
+            <!-- Input field -->
+            <div id="command-input">
+                <textarea autofocus spellcheck="false"></textarea>
+            </div>
+            <!-- Status Bars -->
+            <!--<div id="stat-bars">
+                <div id="health-bar" >Health</div>
+                <div id="mana-bar">Mana</div>
+                <div id="fatigue-bar">Fatigue</div>
+            </div>-->
         </div>
-        <div class="status-bars" id="status">
-            <div class="status-item">
-                <label>Health:</label>
-                <div class="status-bar"><div class="health-fill"></div></div>
+        <!-- Map -->
+        <!--
+        <div id="sidebar">
+            <div id="map">
+                Map
+            </div>
+            <div id="controls">
+                Disconnect
+                Settings
             </div>
         </div>
+        -->
     </div>
     <script src="game.js"></script>
 </body>
